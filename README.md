@@ -1,6 +1,9 @@
+
 # 🕹️ Rust Raycasting 3D (Raylib)
 
 Un moteur de raycasting 3D rétro fait maison, écrit entièrement en **Rust** et propulsé par la bibliothèque **Raylib**. Le projet est conçu pour tourner sur desktop et être compilé pour le Web.
+
+<img width="795" height="596" alt="SCR-20260913-pdip" src="https://github.com/user-attachments/assets/8fddce3c-47de-4425-8423-fbc730dc544b" />
 
 ## 🚀 Fonctionnalités
 
