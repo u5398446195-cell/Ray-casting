@@ -1,0 +1,7 @@
+/target
+/emsdk
+dist/
+*.wasm
+*.data
+.DS_Store
+*.pkg

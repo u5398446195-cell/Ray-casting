@@ -1,0 +1,14 @@
+[package]
+name = "rust_raylib"
+version = "0.1.0"
+edition = "2024"
+
+[target.wasm32-unknown-emscripten]
+rustflags = [
+  "-C", "link-arg=-o",
+  "-C", "link-arg=target/wasm32-unknown-emscripten/debug/index.html"
+]
+
+[dependencies]
+raylib = "6.0.0"
+rand = "0.10"
