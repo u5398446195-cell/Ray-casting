@@ -1,10 +1,10 @@
 # 🕹️ Rust Raycasting 3D (Raylib)
 
-Un moteur de raycasting 3D rétro fait maison, écrit entièrement en **Rust** et propulsé par la bibliothèque **Raylib**. Le projet est conçu pour tourner nativement sur desktop et être compilé vers le Web (**WebAssembly / WASM**).
+Un moteur de raycasting 3D rétro fait maison, écrit entièrement en **Rust** et propulsé par la bibliothèque **Raylib**. Le projet est conçu pour tourner sur desktop et être compilé pour le Web.
 
 ## 🚀 Fonctionnalités
 
-- **Moteur Raycasting 3D personnalisé** : Inspiré des classiques du genre (style *Wolfenstein 3D*), gérant les textures de murs, le ombrage (*shading*) et le sol/plafond.
+- **Moteur Raycasting 3D personnalisé** : Inspiré des classiques du genre (style *Wolfenstein 3D*), gérant les murs, le ombrage (*shading*) et le sol/plafond.
 - **HUD & Minimap en temps réel** : Affichage d'une mini-carte dynamique avec la position et l'orientation du joueur, ainsi qu'un compteur de score.
 - **Écran de victoire** : Overlay de fin de partie stylisé.
 - **Architecture modulaire** : Code séparé proprement (`main.rs`, `player.rs`, `map.rs`).
@@ -15,11 +15,11 @@ Un moteur de raycasting 3D rétro fait maison, écrit entièrement en **Rust** e
 | :--- | :--- |
 | **Flèches directionnelles** | Se déplacer et pivoter dans le labyrinthe |
 
-## 🛠️ Stack technique
+## 🛠️ Stack technique & Choix d'architecture
 
 - **Langage** : [Rust](https://www.rust-lang.org/)
 - **Graphismes / Fenêtrage** : [Raylib](https://www.raylib.com/) (via la crate `raylib-rs`)
-- **Compilation Web** : Emscripten / WebAssembly
+- **Support Web (WASM)** : Étant donné que la cible WebAssembly pure (`wasm32-unknown-unknown`) ne prend pas en charge directement Raylib (qui repose sur du code C bas niveau nécessitant un contexte OpenGL et une gestion de fenêtrage), le projet utilise **Emscripten** (`wasm32-unknown-emscripten`) couplé à `cmake` pour compiler et lier proprement le code C d'origine vers le Web.
 
 ## 📁 Structure du projet
 
